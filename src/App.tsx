@@ -1,10 +1,15 @@
 import Form from "./hooks/Form"
+import Nav from "./hooks/Nav"
+import Theme from "./hooks/Theme"
 
 function App() {
   return (
-    <div className="App">
-      <Form />
-    </div>
+    <>
+      <Nav />
+      <div className="App">
+        <Form />
+      </div>
+    </>
   )
 }
 
