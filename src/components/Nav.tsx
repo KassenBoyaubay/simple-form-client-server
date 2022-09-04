@@ -1,5 +1,5 @@
 import React from 'react'
-import Theme from './Theme'
+import Theme from '../hooks/Theme'
 
 function Nav() {
     return (
