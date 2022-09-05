@@ -59,7 +59,7 @@ function PaymentTier() {
 
     return (
         <Content title='Payment Tier'>
-            {
+            { //isSubmitter?
                 <form onSubmit={handleSubmit(onSubmit)} className={styles.formStyle.form}>
                     <div className="px-1 flex flex-col col-span-6 gap-3">
                         <h2 className='font-["Kumbh_Sans"] text-2xl font-bold tracking-tight text-secondary'>Become a member</h2>
@@ -113,7 +113,7 @@ function PaymentTier() {
                         </div>
                         <p className={styles.formStyle.p}>{errors.tier?.message}</p>
                     </div>
-                    <button type="submit" className="font-sans col-start-2 col-span-4 cursor-pointer btn btn-accent text-xl">Send</button>
+                    <button type="submit" className={styles.formStyle.button}>Send</button>
                 </form>
             }
         </Content>

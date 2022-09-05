@@ -72,7 +72,7 @@ function Dashboard() {
                     <input className={styles.formStyle.input} type="password" placeholder='Confirm password...' {...register('confirmPassword')} disabled={isSubmitting} />
                     <p className={styles.formStyle.p}>{errors.confirmPassword?.message}</p>
                 </div>
-                <button type="submit" className="font-sans col-start-2 col-span-4 cursor-pointer btn btn-accent text-xl">Send</button>
+                <button type="submit" className={styles.formStyle.button}>Send</button>
             </form>
         </Content>
     )
