@@ -6,12 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "json-server --watch --port 8080 ./json_server/db.json"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.7",
     "@types/react-beautiful-dnd": "^13.1.2",
+    "axios": "^0.27.2",
     "daisyui": "^2.24.0",
+    "json-server": "^0.17.0",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
