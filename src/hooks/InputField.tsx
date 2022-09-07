@@ -1,10 +1,13 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useMutation } from "react-query";
+import { useMutation, useQueryClient } from "react-query";
 import * as yup from 'yup'
 import styles from "../styles/style"
+import { postTodo } from '../api/helper';
 
 const InputField = () => {
+    const queryClient = useQueryClient()
+
     const schema = yup.object({}).shape({
         todo: yup.string().ensure().required('please enter a todo'),
     })
@@ -16,21 +19,15 @@ const InputField = () => {
         resolver: yupResolver(schema)
     })
 
-    const mutation = useMutation((data: IToDo) => {
-        return new Promise(async (resolve) => {
-            await setTimeout(() => {
-                console.log(data)
-                resolve(undefined)
-            }, 3000)
-        })
-    }, {
+    const mutation = useMutation(postTodo, {
         onSuccess: () => {
             reset()
-        }
+            queryClient.invalidateQueries('todos')
+        },
     })
 
     const onSubmit: SubmitHandler<IToDo> = async data => {
-        await mutation.mutateAsync(data)
+        await mutation.mutateAsync(data.todo)
     }
 
     return (

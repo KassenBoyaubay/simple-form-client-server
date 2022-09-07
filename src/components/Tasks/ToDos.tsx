@@ -3,7 +3,6 @@ import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautif
 import { getTodos, updateToDo } from '../../api/helper'
 import { IToDos } from '../../interfaces/interfaces'
 
-
 const ToDos = () => {
     const { isLoading, isError, isFetching, data, error } = useQuery<IToDos, Error>("todos", getTodos);
 
@@ -97,9 +96,9 @@ const ToDos = () => {
                                                                 </Draggable>
                                                             )
                                                             :
-                                                            data?.filter(({ completed }) => !completed).map(({ todo }, index) =>
-                                                                <div key={index} className='bg-neutral w-full rounded-md p-4 border-2 border-info'>
-                                                                    <p className='text-info'>
+                                                            data?.filter(({ completed }) => completed).map(({ todo }, index) =>
+                                                                <div key={index} className='bg-neutral w-full rounded-md p-4 border-2 border-secondary'>
+                                                                    <p className='text-secondary'>
                                                                         {todo}
                                                                     </p>
                                                                 </div>

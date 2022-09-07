@@ -10,3 +10,9 @@ export async function updateToDo(postData: IToDo) {
     const response = await apiClient.put(`/todos/${postData.id}`, postData)
     return response
 }
+
+export async function postTodo(postData: IToDo['todo']) {
+    const data = { todo: postData, completed: false }
+    const response = await apiClient.post("/todos", data)
+    return response
+}
