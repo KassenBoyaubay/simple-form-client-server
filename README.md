@@ -1,6 +1,6 @@
 # simple-form-client-server
 Forms, drag-n-drop tasks, tables, toggle-themes, apis
-## Framework, language
+## Framework, language:
 React, Typescript, Vite
 ## Styling:
 Tailwindcss, DaisyUI
