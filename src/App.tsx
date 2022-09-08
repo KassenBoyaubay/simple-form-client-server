@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Nav />
-      <div className="App pb-10">
+      <div className="App pb-10 pt-20">
         <Functionality />
         <Dashboard />
         <PaymentTier />

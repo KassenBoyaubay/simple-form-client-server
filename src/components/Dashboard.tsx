@@ -155,7 +155,7 @@ function Dashboard() {
                                             onChange: column.getToggleVisibilityHandler(),
                                         }}
                                     />
-                                    <label className={styles.formStyle.label}>{column.columnDef.header}</label>
+                                    <label className={styles.formStyle.label}>{column.id}</label>
                                 </div>
                             )
                             :
@@ -169,7 +169,7 @@ function Dashboard() {
                                             onChange: column.getToggleVisibilityHandler(),
                                         }}
                                     />
-                                    <label className={styles.formStyle.label}>{column.columnDef.header}</label>
+                                    <label className={styles.formStyle.label}>{column.id}</label>
                                 </div>
                             )
 
