@@ -27,7 +27,9 @@ const InputField = () => {
     })
 
     const onSubmit: SubmitHandler<IToDo> = async data => {
-        await mutation.mutateAsync(data.todo)
+        if (data) {
+            await mutation.mutate(data.todo)
+        }
     }
 
     return (

@@ -1,59 +1,33 @@
 {
-  "todos": [
+  "dashboard": [
     {
-      "todo": "todo2",
-      "completed": false,
-      "id": 2
-    },
+      "fullName": "Full name",
+      "age": 20,
+      "email": "email@gmail.com",
+      "password": "12345",
+      "id": 1
+    }
+  ],
+  "todos": [
     {
       "todo": "todo1",
       "completed": false,
-      "id": 1
+      "id": 13
     },
     {
-      "todo": "todo3",
+      "todo": "todo 2",
       "completed": true,
-      "id": 3
+      "id": 14
     },
     {
-      "todo": "fefe",
-      "completed": true,
-      "id": 4
-    },
-    {
-      "todo": "kkk",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "todo": "ss",
+      "todo": "Long todo 3 something lorem ipsu ms",
       "completed": false,
-      "id": 6
+      "id": 15
     },
     {
-      "todo": "vd",
+      "todo": "Drag over tasks from left to right and vice versa",
       "completed": false,
-      "id": 7
-    },
-    {
-      "todo": "234",
-      "completed": true,
-      "id": 8
-    },
-    {
-      "todo": "dd",
-      "completed": true,
-      "id": 9
-    },
-    {
-      "todo": "dd",
-      "completed": false,
-      "id": 10
-    },
-    {
-      "todo": "c",
-      "completed": false,
-      "id": 11
+      "id": 16
     }
   ]
 }
